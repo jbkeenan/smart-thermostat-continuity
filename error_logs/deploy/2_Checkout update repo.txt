@@ -1,0 +1,84 @@
+﻿2025-06-05T22:59:57.9628414Z ##[group]Run actions/checkout@v3
+2025-06-05T22:59:57.9629350Z with:
+2025-06-05T22:59:57.9629835Z   repository: jbkeenan/smartstat-updates
+2025-06-05T22:59:57.9630580Z   token: ***
+2025-06-05T22:59:57.9631190Z   ssh-strict: true
+2025-06-05T22:59:57.9631657Z   persist-credentials: true
+2025-06-05T22:59:57.9632152Z   clean: true
+2025-06-05T22:59:57.9632594Z   sparse-checkout-cone-mode: true
+2025-06-05T22:59:57.9633116Z   fetch-depth: 1
+2025-06-05T22:59:57.9633533Z   fetch-tags: false
+2025-06-05T22:59:57.9633949Z   lfs: false
+2025-06-05T22:59:57.9634337Z   submodules: false
+2025-06-05T22:59:57.9634776Z   set-safe-directory: true
+2025-06-05T22:59:57.9635503Z ##[endgroup]
+2025-06-05T22:59:58.0475143Z Syncing repository: jbkeenan/smartstat-updates
+2025-06-05T22:59:58.0477393Z ##[group]Getting Git version info
+2025-06-05T22:59:58.0478284Z Working directory is '/home/runner/work/smartstat-updates/smartstat-updates'
+2025-06-05T22:59:58.0479596Z [command]/usr/bin/git version
+2025-06-05T22:59:58.0529732Z git version 2.49.0
+2025-06-05T22:59:58.0557762Z ##[endgroup]
+2025-06-05T22:59:58.0574200Z Temporarily overriding HOME='/home/runner/work/_temp/11116604-f891-4870-8faa-eb50b64994e8' before making global git config changes
+2025-06-05T22:59:58.0576961Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-05T22:59:58.0579447Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T22:59:58.0616321Z Deleting the contents of '/home/runner/work/smartstat-updates/smartstat-updates'
+2025-06-05T22:59:58.0619890Z ##[group]Initializing the repository
+2025-06-05T22:59:58.0624253Z [command]/usr/bin/git init /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T22:59:58.0698277Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-05T22:59:58.0699605Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-05T22:59:58.0700631Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-05T22:59:58.0702879Z hint:
+2025-06-05T22:59:58.0703931Z hint: 	git config --global init.defaultBranch <name>
+2025-06-05T22:59:58.0705139Z hint:
+2025-06-05T22:59:58.0706287Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-05T22:59:58.0708188Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-05T22:59:58.0709714Z hint:
+2025-06-05T22:59:58.0710460Z hint: 	git branch -m <name>
+2025-06-05T22:59:58.0712361Z Initialized empty Git repository in /home/runner/work/smartstat-updates/smartstat-updates/.git/
+2025-06-05T22:59:58.0715770Z [command]/usr/bin/git remote add origin https://github.com/jbkeenan/smartstat-updates
+2025-06-05T22:59:58.0747294Z ##[endgroup]
+2025-06-05T22:59:58.0748667Z ##[group]Disabling automatic garbage collection
+2025-06-05T22:59:58.0750078Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-05T22:59:58.0777002Z ##[endgroup]
+2025-06-05T22:59:58.0778425Z ##[group]Setting up auth
+2025-06-05T22:59:58.0783456Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-05T22:59:58.0811165Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-05T22:59:58.1097138Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-05T22:59:58.1125031Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-05T22:59:58.1339437Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-05T22:59:58.1371969Z ##[endgroup]
+2025-06-05T22:59:58.1373451Z ##[group]Fetching the repository
+2025-06-05T22:59:58.1381764Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +71ddb545414d8ece57164e6613a018472a9f7b00:refs/remotes/origin/main
+2025-06-05T22:59:58.6632433Z remote: Enumerating objects: 10, done.        
+2025-06-05T22:59:58.6633998Z remote: Counting objects:  10% (1/10)        
+2025-06-05T22:59:58.6634894Z remote: Counting objects:  20% (2/10)        
+2025-06-05T22:59:58.6635763Z remote: Counting objects:  30% (3/10)        
+2025-06-05T22:59:58.6636639Z remote: Counting objects:  40% (4/10)        
+2025-06-05T22:59:58.6637495Z remote: Counting objects:  50% (5/10)        
+2025-06-05T22:59:58.6638355Z remote: Counting objects:  60% (6/10)        
+2025-06-05T22:59:58.6639215Z remote: Counting objects:  70% (7/10)        
+2025-06-05T22:59:58.6640160Z remote: Counting objects:  80% (8/10)        
+2025-06-05T22:59:58.6641278Z remote: Counting objects:  90% (9/10)        
+2025-06-05T22:59:58.6642205Z remote: Counting objects: 100% (10/10)        
+2025-06-05T22:59:58.6643122Z remote: Counting objects: 100% (10/10), done.        
+2025-06-05T22:59:58.6644122Z remote: Compressing objects:  14% (1/7)        
+2025-06-05T22:59:58.6645107Z remote: Compressing objects:  28% (2/7)        
+2025-06-05T22:59:58.6646120Z remote: Compressing objects:  42% (3/7)        
+2025-06-05T22:59:58.6647334Z remote: Compressing objects:  57% (4/7)        
+2025-06-05T22:59:58.6648372Z remote: Compressing objects:  71% (5/7)        
+2025-06-05T22:59:58.6649439Z remote: Compressing objects:  85% (6/7)        
+2025-06-05T22:59:58.6650535Z remote: Compressing objects: 100% (7/7)        
+2025-06-05T22:59:58.6651853Z remote: Compressing objects: 100% (7/7), done.        
+2025-06-05T22:59:59.2925804Z remote: Total 10 (delta 0), reused 9 (delta 0), pack-reused 0 (from 0)        
+2025-06-05T22:59:59.7774047Z From https://github.com/jbkeenan/smartstat-updates
+2025-06-05T22:59:59.7775011Z  * [new ref]         71ddb545414d8ece57164e6613a018472a9f7b00 -> origin/main
+2025-06-05T22:59:59.7803182Z ##[endgroup]
+2025-06-05T22:59:59.7803858Z ##[group]Determining the checkout info
+2025-06-05T22:59:59.7806189Z ##[endgroup]
+2025-06-05T22:59:59.7806973Z ##[group]Checking out the ref
+2025-06-05T22:59:59.7811392Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-05T22:59:59.8069911Z Switched to a new branch 'main'
+2025-06-05T22:59:59.8071342Z branch 'main' set up to track 'origin/main'.
+2025-06-05T22:59:59.8111474Z ##[endgroup]
+2025-06-05T22:59:59.8114212Z [command]/usr/bin/git log -1 --format='%H'
+2025-06-05T22:59:59.8135622Z '71ddb545414d8ece57164e6613a018472a9f7b00'

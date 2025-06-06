@@ -1,0 +1,497 @@
+﻿2025-06-05T22:59:56.9166711Z Current runner version: '2.325.0'
+2025-06-05T22:59:56.9190331Z ##[group]Runner Image Provisioner
+2025-06-05T22:59:56.9191523Z Hosted Compute Agent
+2025-06-05T22:59:56.9192075Z Version: 20250508.323
+2025-06-05T22:59:56.9192655Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-06-05T22:59:56.9193372Z Build Date: 2025-05-08T19:40:08Z
+2025-06-05T22:59:56.9193952Z ##[endgroup]
+2025-06-05T22:59:56.9194509Z ##[group]Operating System
+2025-06-05T22:59:56.9195018Z Ubuntu
+2025-06-05T22:59:56.9195542Z 24.04.2
+2025-06-05T22:59:56.9195994Z LTS
+2025-06-05T22:59:56.9196393Z ##[endgroup]
+2025-06-05T22:59:56.9196935Z ##[group]Runner Image
+2025-06-05T22:59:56.9197465Z Image: ubuntu-24.04
+2025-06-05T22:59:56.9197948Z Version: 20250511.1.0
+2025-06-05T22:59:56.9199018Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-05T22:59:56.9200505Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-06-05T22:59:56.9201778Z ##[endgroup]
+2025-06-05T22:59:56.9202845Z ##[group]GITHUB_TOKEN Permissions
+2025-06-05T22:59:56.9204943Z Contents: read
+2025-06-05T22:59:56.9205493Z Metadata: read
+2025-06-05T22:59:56.9205969Z Packages: read
+2025-06-05T22:59:56.9206523Z ##[endgroup]
+2025-06-05T22:59:56.9208759Z Secret source: Actions
+2025-06-05T22:59:56.9209712Z Prepare workflow directory
+2025-06-05T22:59:56.9553436Z Prepare all required actions
+2025-06-05T22:59:56.9592424Z Getting action download info
+2025-06-05T22:59:57.3463020Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-06-05T22:59:57.3464128Z Version: 3.6.0
+2025-06-05T22:59:57.3465224Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-06-05T22:59:57.3466508Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-06-05T22:59:57.3467245Z ##[endgroup]
+2025-06-05T22:59:57.4293798Z ##[group]Download immutable action package 'actions/setup-python@v4'
+2025-06-05T22:59:57.4294765Z Version: 4.9.1
+2025-06-05T22:59:57.4295597Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+2025-06-05T22:59:57.4296564Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+2025-06-05T22:59:57.4297373Z ##[endgroup]
+2025-06-05T22:59:57.8943958Z Complete job name: deploy
+2025-06-05T22:59:57.9628444Z ##[group]Run actions/checkout@v3
+2025-06-05T22:59:57.9629363Z with:
+2025-06-05T22:59:57.9629839Z   repository: jbkeenan/smartstat-updates
+2025-06-05T22:59:57.9630602Z   token: ***
+2025-06-05T22:59:57.9631196Z   ssh-strict: true
+2025-06-05T22:59:57.9631661Z   persist-credentials: true
+2025-06-05T22:59:57.9632155Z   clean: true
+2025-06-05T22:59:57.9632597Z   sparse-checkout-cone-mode: true
+2025-06-05T22:59:57.9633119Z   fetch-depth: 1
+2025-06-05T22:59:57.9633535Z   fetch-tags: false
+2025-06-05T22:59:57.9633951Z   lfs: false
+2025-06-05T22:59:57.9634340Z   submodules: false
+2025-06-05T22:59:57.9634780Z   set-safe-directory: true
+2025-06-05T22:59:57.9635517Z ##[endgroup]
+2025-06-05T22:59:58.0475201Z Syncing repository: jbkeenan/smartstat-updates
+2025-06-05T22:59:58.0477420Z ##[group]Getting Git version info
+2025-06-05T22:59:58.0478290Z Working directory is '/home/runner/work/smartstat-updates/smartstat-updates'
+2025-06-05T22:59:58.0479604Z [command]/usr/bin/git version
+2025-06-05T22:59:58.0529826Z git version 2.49.0
+2025-06-05T22:59:58.0557791Z ##[endgroup]
+2025-06-05T22:59:58.0574234Z Temporarily overriding HOME='/home/runner/work/_temp/11116604-f891-4870-8faa-eb50b64994e8' before making global git config changes
+2025-06-05T22:59:58.0576986Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-05T22:59:58.0579473Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T22:59:58.0616357Z Deleting the contents of '/home/runner/work/smartstat-updates/smartstat-updates'
+2025-06-05T22:59:58.0619918Z ##[group]Initializing the repository
+2025-06-05T22:59:58.0624286Z [command]/usr/bin/git init /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T22:59:58.0698312Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-05T22:59:58.0699618Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-05T22:59:58.0700670Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-05T22:59:58.0702910Z hint:
+2025-06-05T22:59:58.0703954Z hint: 	git config --global init.defaultBranch <name>
+2025-06-05T22:59:58.0705172Z hint:
+2025-06-05T22:59:58.0706313Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-05T22:59:58.0708220Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-05T22:59:58.0709738Z hint:
+2025-06-05T22:59:58.0710470Z hint: 	git branch -m <name>
+2025-06-05T22:59:58.0712382Z Initialized empty Git repository in /home/runner/work/smartstat-updates/smartstat-updates/.git/
+2025-06-05T22:59:58.0715796Z [command]/usr/bin/git remote add origin https://github.com/jbkeenan/smartstat-updates
+2025-06-05T22:59:58.0747322Z ##[endgroup]
+2025-06-05T22:59:58.0748685Z ##[group]Disabling automatic garbage collection
+2025-06-05T22:59:58.0750104Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-05T22:59:58.0777031Z ##[endgroup]
+2025-06-05T22:59:58.0778471Z ##[group]Setting up auth
+2025-06-05T22:59:58.0783489Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-05T22:59:58.0811201Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-05T22:59:58.1097189Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-05T22:59:58.1125075Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-05T22:59:58.1339486Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-05T22:59:58.1372007Z ##[endgroup]
+2025-06-05T22:59:58.1373475Z ##[group]Fetching the repository
+2025-06-05T22:59:58.1382138Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +71ddb545414d8ece57164e6613a018472a9f7b00:refs/remotes/origin/main
+2025-06-05T22:59:58.6632547Z remote: Enumerating objects: 10, done.        
+2025-06-05T22:59:58.6634007Z remote: Counting objects:  10% (1/10)        
+2025-06-05T22:59:58.6634898Z remote: Counting objects:  20% (2/10)        
+2025-06-05T22:59:58.6635775Z remote: Counting objects:  30% (3/10)        
+2025-06-05T22:59:58.6636644Z remote: Counting objects:  40% (4/10)        
+2025-06-05T22:59:58.6637501Z remote: Counting objects:  50% (5/10)        
+2025-06-05T22:59:58.6638358Z remote: Counting objects:  60% (6/10)        
+2025-06-05T22:59:58.6639234Z remote: Counting objects:  70% (7/10)        
+2025-06-05T22:59:58.6640166Z remote: Counting objects:  80% (8/10)        
+2025-06-05T22:59:58.6641286Z remote: Counting objects:  90% (9/10)        
+2025-06-05T22:59:58.6642210Z remote: Counting objects: 100% (10/10)        
+2025-06-05T22:59:58.6643142Z remote: Counting objects: 100% (10/10), done.        
+2025-06-05T22:59:58.6644127Z remote: Compressing objects:  14% (1/7)        
+2025-06-05T22:59:58.6645111Z remote: Compressing objects:  28% (2/7)        
+2025-06-05T22:59:58.6646142Z remote: Compressing objects:  42% (3/7)        
+2025-06-05T22:59:58.6647340Z remote: Compressing objects:  57% (4/7)        
+2025-06-05T22:59:58.6648376Z remote: Compressing objects:  71% (5/7)        
+2025-06-05T22:59:58.6649443Z remote: Compressing objects:  85% (6/7)        
+2025-06-05T22:59:58.6650539Z remote: Compressing objects: 100% (7/7)        
+2025-06-05T22:59:58.6651860Z remote: Compressing objects: 100% (7/7), done.        
+2025-06-05T22:59:59.2925878Z remote: Total 10 (delta 0), reused 9 (delta 0), pack-reused 0 (from 0)        
+2025-06-05T22:59:59.7774097Z From https://github.com/jbkeenan/smartstat-updates
+2025-06-05T22:59:59.7775021Z  * [new ref]         71ddb545414d8ece57164e6613a018472a9f7b00 -> origin/main
+2025-06-05T22:59:59.7803203Z ##[endgroup]
+2025-06-05T22:59:59.7803926Z ##[group]Determining the checkout info
+2025-06-05T22:59:59.7806206Z ##[endgroup]
+2025-06-05T22:59:59.7806990Z ##[group]Checking out the ref
+2025-06-05T22:59:59.7811412Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-05T22:59:59.8069972Z Switched to a new branch 'main'
+2025-06-05T22:59:59.8071358Z branch 'main' set up to track 'origin/main'.
+2025-06-05T22:59:59.8111488Z ##[endgroup]
+2025-06-05T22:59:59.8114224Z [command]/usr/bin/git log -1 --format='%H'
+2025-06-05T22:59:59.8135640Z '71ddb545414d8ece57164e6613a018472a9f7b00'
+2025-06-05T22:59:59.8355361Z ##[group]Run actions/setup-python@v4
+2025-06-05T22:59:59.8355653Z with:
+2025-06-05T22:59:59.8355843Z   python-version: 3.10
+2025-06-05T22:59:59.8356101Z   check-latest: false
+2025-06-05T22:59:59.8356446Z   token: ***
+2025-06-05T22:59:59.8356638Z   update-environment: true
+2025-06-05T22:59:59.8356861Z   allow-prereleases: false
+2025-06-05T22:59:59.8357072Z ##[endgroup]
+2025-06-05T23:00:00.0029476Z ##[group]Installed versions
+2025-06-05T23:00:00.0158721Z Successfully set up CPython (3.10.17)
+2025-06-05T23:00:00.0161723Z ##[endgroup]
+2025-06-05T23:00:00.0275896Z ##[group]Run sudo apt-get install unzip
+2025-06-05T23:00:00.0276273Z [36;1msudo apt-get install unzip[0m
+2025-06-05T23:00:00.0484400Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:00.0484775Z env:
+2025-06-05T23:00:00.0485089Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0485613Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:00.0486165Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0486641Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0487077Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0487545Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:00.0487906Z ##[endgroup]
+2025-06-05T23:00:00.9921609Z Reading package lists...
+2025-06-05T23:00:01.1711980Z Building dependency tree...
+2025-06-05T23:00:01.1724971Z Reading state information...
+2025-06-05T23:00:01.3351224Z unzip is already the newest version (6.0-28ubuntu4.1).
+2025-06-05T23:00:01.3351926Z 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+2025-06-05T23:00:01.3405458Z ##[group]Run echo "Files in repository:"
+2025-06-05T23:00:01.3405798Z [36;1mecho "Files in repository:"[0m
+2025-06-05T23:00:01.3406035Z [36;1mls -la[0m
+2025-06-05T23:00:01.3406197Z [36;1m[0m
+2025-06-05T23:00:01.3406364Z [36;1m# Find the ZIP file[0m
+2025-06-05T23:00:01.3406589Z [36;1mZIP_FILE=$(ls *.zip | head -n 1)[0m
+2025-06-05T23:00:01.3406841Z [36;1mecho "Found ZIP file: $ZIP_FILE"[0m
+2025-06-05T23:00:01.3407067Z [36;1m[0m
+2025-06-05T23:00:01.3407247Z [36;1m# Create extraction directory[0m
+2025-06-05T23:00:01.3407495Z [36;1mmkdir -p extracted[0m
+2025-06-05T23:00:01.3407701Z [36;1m[0m
+2025-06-05T23:00:01.3407860Z [36;1m# Extract the ZIP[0m
+2025-06-05T23:00:01.3408091Z [36;1munzip -o "$ZIP_FILE" -d extracted[0m
+2025-06-05T23:00:01.3408334Z [36;1m[0m
+2025-06-05T23:00:01.3408497Z [36;1mecho "Extracted contents:"[0m
+2025-06-05T23:00:01.3408731Z [36;1mls -la extracted[0m
+2025-06-05T23:00:01.3459626Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:01.3459885Z env:
+2025-06-05T23:00:01.3460124Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3460546Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:01.3461190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3461556Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3461906Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3462425Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:01.3462708Z ##[endgroup]
+2025-06-05T23:00:01.3531443Z Files in repository:
+2025-06-05T23:00:01.3545629Z total 17060
+2025-06-05T23:00:01.3546006Z drwxr-xr-x 5 runner docker     4096 Jun  5 22:59 .
+2025-06-05T23:00:01.3546487Z drwxr-xr-x 3 runner docker     4096 Jun  5 22:59 ..
+2025-06-05T23:00:01.3546985Z drwxr-xr-x 7 runner docker     4096 Jun  5 22:59 .git
+2025-06-05T23:00:01.3547539Z drwxr-xr-x 3 runner docker     4096 Jun  5 22:59 .github
+2025-06-05T23:00:01.3548127Z -rw-r--r-- 1 runner docker     4319 Jun  5 22:59 .gitignore
+2025-06-05T23:00:01.3548704Z -rw-r--r-- 1 runner docker      171 Jun  5 22:59 README.md
+2025-06-05T23:00:01.3549066Z drwxr-xr-x 2 runner docker     4096 Jun  5 22:59 scripts
+2025-06-05T23:00:01.3549492Z -rw-r--r-- 1 runner docker 17435526 Jun  5 22:59 smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3570388Z Found ZIP file: smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3605295Z Archive:  smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3605886Z    creating: extracted/frontend/
+2025-06-05T23:00:01.3606338Z    creating: extracted/frontend/dist/
+2025-06-05T23:00:01.3606943Z    creating: extracted/frontend/dist/assets/
+2025-06-05T23:00:01.3607475Z    creating: extracted/frontend/dist/assets/icons/
+2025-06-05T23:00:01.3608546Z   inflating: extracted/frontend/dist/assets/icons/instagram.svg  
+2025-06-05T23:00:01.3609289Z   inflating: extracted/frontend/dist/assets/icons/calendar.svg  
+2025-06-05T23:00:01.3609964Z   inflating: extracted/frontend/dist/assets/icons/eco.svg  
+2025-06-05T23:00:01.3610758Z   inflating: extracted/frontend/dist/assets/icons/facebook.svg  
+2025-06-05T23:00:01.3611724Z   inflating: extracted/frontend/dist/assets/icons/money-saving.svg  
+2025-06-05T23:00:01.3612477Z   inflating: extracted/frontend/dist/assets/icons/linkedin.svg  
+2025-06-05T23:00:01.3613231Z   inflating: extracted/frontend/dist/assets/icons/multi-brand.svg  
+2025-06-05T23:00:01.3613961Z   inflating: extracted/frontend/dist/assets/icons/twitter.svg  
+2025-06-05T23:00:01.3614592Z    creating: extracted/frontend/dist/assets/images/
+2025-06-05T23:00:01.3704240Z   inflating: extracted/frontend/dist/assets/images/calendar-integration.png  
+2025-06-05T23:00:01.3778727Z   inflating: extracted/frontend/dist/assets/images/dashboard-mockup.png  
+2025-06-05T23:00:01.3872480Z   inflating: extracted/frontend/dist/assets/images/hero-thermostat.png  
+2025-06-05T23:00:01.3960784Z   inflating: extracted/frontend/dist/assets/images/multi-brand-devices.png  
+2025-06-05T23:00:01.4051453Z   inflating: extracted/frontend/dist/assets/images/savings-graph.png  
+2025-06-05T23:00:01.4057199Z   inflating: extracted/frontend/dist/assets/images/testimonial-1.jpg  
+2025-06-05T23:00:01.4064543Z   inflating: extracted/frontend/dist/assets/images/testimonial-2.jpg  
+2025-06-05T23:00:01.4071565Z   inflating: extracted/frontend/dist/assets/images/testimonial-3.jpg  
+2025-06-05T23:00:01.4097079Z   inflating: extracted/frontend/dist/assets/index-JMNJiWQO.js  
+2025-06-05T23:00:01.4099132Z   inflating: extracted/frontend/dist/assets/index-aasE8u49.css  
+2025-06-05T23:00:01.4099975Z   inflating: extracted/frontend/dist/assets/pattern.svg  
+2025-06-05T23:00:01.4100658Z   inflating: extracted/frontend/dist/index.html  
+2025-06-05T23:00:01.4101318Z   inflating: extracted/frontend/dist/vite.svg  
+2025-06-05T23:00:01.4101770Z    creating: extracted/frontend/public/
+2025-06-05T23:00:01.4102279Z    creating: extracted/frontend/public/assets/
+2025-06-05T23:00:01.4102757Z    creating: extracted/frontend/public/assets/icons/
+2025-06-05T23:00:01.4103559Z   inflating: extracted/frontend/public/assets/icons/instagram.svg  
+2025-06-05T23:00:01.4104276Z   inflating: extracted/frontend/public/assets/icons/calendar.svg  
+2025-06-05T23:00:01.4104927Z   inflating: extracted/frontend/public/assets/icons/eco.svg  
+2025-06-05T23:00:01.4105622Z   inflating: extracted/frontend/public/assets/icons/facebook.svg  
+2025-06-05T23:00:01.4106323Z   inflating: extracted/frontend/public/assets/icons/money-saving.svg  
+2025-06-05T23:00:01.4107336Z   inflating: extracted/frontend/public/assets/icons/linkedin.svg  
+2025-06-05T23:00:01.4108034Z   inflating: extracted/frontend/public/assets/icons/multi-brand.svg  
+2025-06-05T23:00:01.4108666Z   inflating: extracted/frontend/public/assets/icons/twitter.svg  
+2025-06-05T23:00:01.4109220Z    creating: extracted/frontend/public/assets/images/
+2025-06-05T23:00:01.4198711Z   inflating: extracted/frontend/public/assets/images/calendar-integration.png  
+2025-06-05T23:00:01.4272756Z   inflating: extracted/frontend/public/assets/images/dashboard-mockup.png  
+2025-06-05T23:00:01.4366196Z   inflating: extracted/frontend/public/assets/images/hero-thermostat.png  
+2025-06-05T23:00:01.4454769Z   inflating: extracted/frontend/public/assets/images/multi-brand-devices.png  
+2025-06-05T23:00:01.4544568Z   inflating: extracted/frontend/public/assets/images/savings-graph.png  
+2025-06-05T23:00:01.4550800Z   inflating: extracted/frontend/public/assets/images/testimonial-1.jpg  
+2025-06-05T23:00:01.4558428Z   inflating: extracted/frontend/public/assets/images/testimonial-2.jpg  
+2025-06-05T23:00:01.4565944Z   inflating: extracted/frontend/public/assets/images/testimonial-3.jpg  
+2025-06-05T23:00:01.4566751Z   inflating: extracted/frontend/public/assets/pattern.svg  
+2025-06-05T23:00:01.4567372Z   inflating: extracted/frontend/public/vite.svg  
+2025-06-05T23:00:01.4567897Z    creating: extracted/frontend/src/
+2025-06-05T23:00:01.4568363Z    creating: extracted/frontend/src/assets/
+2025-06-05T23:00:01.4569261Z   inflating: extracted/frontend/src/assets/react.svg  
+2025-06-05T23:00:01.4569842Z    creating: extracted/frontend/src/components/
+2025-06-05T23:00:01.4570403Z    creating: extracted/frontend/src/components/shared/
+2025-06-05T23:00:01.4571563Z   inflating: extracted/frontend/src/components/shared/TestModeToggle.tsx  
+2025-06-05T23:00:01.4572477Z   inflating: extracted/frontend/src/components/shared/ErrorHandler.tsx  
+2025-06-05T23:00:01.4573416Z   inflating: extracted/frontend/src/components/shared/Layout.css  
+2025-06-05T23:00:01.4574380Z   inflating: extracted/frontend/src/components/shared/Layout.tsx  
+2025-06-05T23:00:01.4575322Z   inflating: extracted/frontend/src/components/shared/PrivateRoute.tsx  
+2025-06-05T23:00:01.4576440Z   inflating: extracted/frontend/src/components/EnhancedLandingPage.css  
+2025-06-05T23:00:01.4578303Z   inflating: extracted/frontend/src/components/EnhancedLandingPage.tsx  
+2025-06-05T23:00:01.4579030Z   inflating: extracted/frontend/src/components/FAQPage.css  
+2025-06-05T23:00:01.4580387Z   inflating: extracted/frontend/src/components/FAQPage.tsx  
+2025-06-05T23:00:01.4581791Z   inflating: extracted/frontend/src/components/LandingPage.css  
+2025-06-05T23:00:01.4583270Z   inflating: extracted/frontend/src/components/LandingPage.tsx  
+2025-06-05T23:00:01.4584216Z   inflating: extracted/frontend/src/components/LoginPage.tsx  
+2025-06-05T23:00:01.4585557Z   inflating: extracted/frontend/src/components/RegisterPage.tsx  
+2025-06-05T23:00:01.4586522Z   inflating: extracted/frontend/src/components/TestModeToggle.css  
+2025-06-05T23:00:01.4587346Z   inflating: extracted/frontend/src/components/TestModeToggle.tsx  
+2025-06-05T23:00:01.4588086Z    creating: extracted/frontend/src/hooks/
+2025-06-05T23:00:01.4589302Z   inflating: extracted/frontend/src/hooks/useAuth.tsx  
+2025-06-05T23:00:01.4589869Z    creating: extracted/frontend/src/lib/
+2025-06-05T23:00:01.4593151Z   inflating: extracted/frontend/src/lib/api.ts  
+2025-06-05T23:00:01.4593692Z    creating: extracted/frontend/src/pages/
+2025-06-05T23:00:01.4594301Z    creating: extracted/frontend/src/pages/business-analysis/
+2025-06-05T23:00:01.4596605Z   inflating: extracted/frontend/src/pages/business-analysis/BusinessAnalysisPage.tsx  
+2025-06-05T23:00:01.4675733Z    creating: extracted/frontend/src/pages/calendars/
+2025-06-05T23:00:01.4676440Z   inflating: extracted/frontend/src/pages/calendars/CalendarsPage.tsx  
+2025-06-05T23:00:01.4677498Z    creating: extracted/frontend/src/pages/dashboard/
+2025-06-05T23:00:01.4678869Z   inflating: extracted/frontend/src/pages/dashboard/DashboardPage.tsx  
+2025-06-05T23:00:01.4679661Z    creating: extracted/frontend/src/pages/properties/
+2025-06-05T23:00:01.4680401Z   inflating: extracted/frontend/src/pages/properties/PropertiesPage.tsx  
+2025-06-05T23:00:01.4681296Z    creating: extracted/frontend/src/pages/schedules/
+2025-06-05T23:00:01.4681967Z   inflating: extracted/frontend/src/pages/schedules/SchedulesPage.tsx  
+2025-06-05T23:00:01.4682642Z    creating: extracted/frontend/src/pages/thermostats/
+2025-06-05T23:00:01.4683333Z   inflating: extracted/frontend/src/pages/thermostats/ThermostatsPage.tsx  
+2025-06-05T23:00:01.4684014Z   inflating: extracted/frontend/src/index.css  
+2025-06-05T23:00:01.4684549Z   inflating: extracted/frontend/src/App.css  
+2025-06-05T23:00:01.4685016Z   inflating: extracted/frontend/src/App.tsx  
+2025-06-05T23:00:01.4685361Z  extracting: extracted/frontend/src/vite-env.d.ts  
+2025-06-05T23:00:01.4685677Z   inflating: extracted/frontend/src/main.tsx  
+2025-06-05T23:00:01.4685986Z   inflating: extracted/frontend/eslint.config.js  
+2025-06-05T23:00:01.4686275Z   inflating: extracted/frontend/README.md  
+2025-06-05T23:00:01.4686557Z   inflating: extracted/frontend/package-lock.json  
+2025-06-05T23:00:01.4686849Z   inflating: extracted/frontend/index.html  
+2025-06-05T23:00:01.4687139Z   inflating: extracted/frontend/tsconfig.app.json  
+2025-06-05T23:00:01.4687428Z   inflating: extracted/frontend/package.json  
+2025-06-05T23:00:01.4687734Z   inflating: extracted/frontend/tsconfig.node.json  
+2025-06-05T23:00:01.4688037Z   inflating: extracted/frontend/tsconfig.json  
+2025-06-05T23:00:01.4688324Z   inflating: extracted/frontend/vite.config.ts  
+2025-06-05T23:00:01.4688597Z    creating: extracted/backend/
+2025-06-05T23:00:01.4688823Z    creating: extracted/backend/api/
+2025-06-05T23:00:01.4689076Z    creating: extracted/backend/api/migrations/
+2025-06-05T23:00:01.4689402Z   inflating: extracted/backend/api/migrations/0001_initial.py  
+2025-06-05T23:00:01.4689779Z  extracting: extracted/backend/api/migrations/__init__.py  
+2025-06-05T23:00:01.4690103Z    creating: extracted/backend/api/tests/
+2025-06-05T23:00:01.4690388Z   inflating: extracted/backend/api/tests/run_tests.py  
+2025-06-05T23:00:01.4690793Z   inflating: extracted/backend/api/tests/test_thermostat_api_extension.py  
+2025-06-05T23:00:01.4691510Z   inflating: extracted/backend/api/tests/test_thermostat_clients.py  
+2025-06-05T23:00:01.4691881Z    creating: extracted/backend/api/thermostat_clients/
+2025-06-05T23:00:01.4692434Z   inflating: extracted/backend/api/thermostat_clients/base_client.py  
+2025-06-05T23:00:01.4692878Z  extracting: extracted/backend/api/thermostat_clients/__init__.py  
+2025-06-05T23:00:01.4693309Z   inflating: extracted/backend/api/thermostat_clients/client_factory.py  
+2025-06-05T23:00:01.4693755Z   inflating: extracted/backend/api/thermostat_clients/cielo_client.py  
+2025-06-05T23:00:01.4694194Z   inflating: extracted/backend/api/thermostat_clients/pioneer_client.py  
+2025-06-05T23:00:01.4694659Z   inflating: extracted/backend/api/thermostat_clients/nest_client.py  
+2025-06-05T23:00:01.4695079Z   inflating: extracted/backend/api/serializers.py  
+2025-06-05T23:00:01.4695399Z  extracting: extracted/backend/api/__init__.py  
+2025-06-05T23:00:01.4695726Z   inflating: extracted/backend/api/admin.py  
+2025-06-05T23:00:01.4696008Z   inflating: extracted/backend/api/apps.py  
+2025-06-05T23:00:01.4696293Z   inflating: extracted/backend/api/endpoints.md  
+2025-06-05T23:00:01.4696599Z   inflating: extracted/backend/api/models.py  
+2025-06-05T23:00:01.4696884Z   inflating: extracted/backend/api/tests.py  
+2025-06-05T23:00:01.4697163Z   inflating: extracted/backend/api/urls.py  
+2025-06-05T23:00:01.4697434Z   inflating: extracted/backend/api/views.py  
+2025-06-05T23:00:01.4697769Z   inflating: extracted/backend/api/thermostat_api_extension.py  
+2025-06-05T23:00:01.4698092Z    creating: extracted/backend/static/
+2025-06-05T23:00:01.4698351Z    creating: extracted/backend/static/css/
+2025-06-05T23:00:01.4698808Z   inflating: extracted/backend/static/css/business_analysis.css  
+2025-06-05T23:00:01.4699148Z    creating: extracted/backend/static/images/
+2025-06-05T23:00:01.4699502Z   inflating: extracted/backend/static/images/thermostat-pattern.svg  
+2025-06-05T23:00:01.4699911Z   inflating: extracted/backend/static/images/cta-pattern.svg  
+2025-06-05T23:00:01.4700233Z    creating: extracted/backend/templates/
+2025-06-05T23:00:01.4700751Z   inflating: extracted/backend/templates/business_analysis.html  
+2025-06-05T23:00:01.4701534Z    creating: extracted/backend/thermostat_project/
+2025-06-05T23:00:01.4702108Z  extracting: extracted/backend/thermostat_project/__init__.py  
+2025-06-05T23:00:01.4702493Z   inflating: extracted/backend/thermostat_project/asgi.py  
+2025-06-05T23:00:01.4702884Z   inflating: extracted/backend/thermostat_project/settings.py  
+2025-06-05T23:00:01.4703251Z   inflating: extracted/backend/thermostat_project/urls.py  
+2025-06-05T23:00:01.4703596Z   inflating: extracted/backend/thermostat_project/wsgi.py  
+2025-06-05T23:00:01.4703934Z   inflating: extracted/backend/deployment_guide.md  
+2025-06-05T23:00:01.4704229Z   inflating: extracted/backend/db.sqlite3  
+2025-06-05T23:00:01.4704509Z   inflating: extracted/backend/requirements.txt  
+2025-06-05T23:00:01.4704968Z   inflating: extracted/backend/manage.py  
+2025-06-05T23:00:01.4705543Z   inflating: extracted/backend/frontend_integration_guide.md  
+2025-06-05T23:00:01.4706059Z Extracted contents:
+2025-06-05T23:00:01.4706366Z total 16
+2025-06-05T23:00:01.4706692Z drwxr-xr-x 4 runner docker 4096 Jun  5 23:00 .
+2025-06-05T23:00:01.4707148Z drwxr-xr-x 6 runner docker 4096 Jun  5 23:00 ..
+2025-06-05T23:00:01.4707450Z drwxrwxr-x 6 runner docker 4096 Jun  5 22:46 backend
+2025-06-05T23:00:01.4707752Z drwxrwxr-x 5 runner docker 4096 Jun  5 22:08 frontend
+2025-06-05T23:00:01.4753573Z ##[group]Run # Debug information
+2025-06-05T23:00:01.4753905Z [36;1m# Debug information[0m
+2025-06-05T23:00:01.4754146Z [36;1mecho "Current directory: $(pwd)"[0m
+2025-06-05T23:00:01.4754414Z [36;1mecho "Extracted contents:"[0m
+2025-06-05T23:00:01.4754644Z [36;1mls -la extracted[0m
+2025-06-05T23:00:01.4754839Z [36;1m[0m
+2025-06-05T23:00:01.4755026Z [36;1m# Check if frontend directory exists[0m
+2025-06-05T23:00:01.4755339Z [36;1mif [ -d "extracted/new_structure/frontend" ]; then[0m
+2025-06-05T23:00:01.4755728Z [36;1m  echo "Found frontend directory at extracted/new_structure/frontend"[0m
+2025-06-05T23:00:01.4756110Z [36;1m  FRONTEND_DIR="extracted/new_structure/frontend"[0m
+2025-06-05T23:00:01.4756405Z [36;1melif [ -d "extracted/frontend" ]; then[0m
+2025-06-05T23:00:01.4756715Z [36;1m  echo "Found frontend directory at extracted/frontend"[0m
+2025-06-05T23:00:01.4757028Z [36;1m  FRONTEND_DIR="extracted/frontend"[0m
+2025-06-05T23:00:01.4757264Z [36;1melse[0m
+2025-06-05T23:00:01.4757544Z [36;1m  echo "ERROR: Could not find frontend directory in extracted ZIP"[0m
+2025-06-05T23:00:01.4757889Z [36;1m  find extracted -type d | sort[0m
+2025-06-05T23:00:01.4758117Z [36;1m  exit 1[0m
+2025-06-05T23:00:01.4758284Z [36;1mfi[0m
+2025-06-05T23:00:01.4758438Z [36;1m[0m
+2025-06-05T23:00:01.4758619Z [36;1m# Clone frontend repository[0m
+2025-06-05T23:00:01.4759614Z [36;1mgit clone ***github.com/jbkeenan/smartstatfront.git frontend_repo[0m
+2025-06-05T23:00:01.4759946Z [36;1m[0m
+2025-06-05T23:00:01.4760110Z [36;1m# Configure Git[0m
+2025-06-05T23:00:01.4760307Z [36;1mcd frontend_repo[0m
+2025-06-05T23:00:01.4760539Z [36;1mgit config user.name "GitHub Action"[0m
+2025-06-05T23:00:01.4760825Z [36;1mgit config user.email "action@github.com"[0m
+2025-06-05T23:00:01.4761209Z [36;1m[0m
+2025-06-05T23:00:01.4761410Z [36;1m# Remove all existing files (except .git )[0m
+2025-06-05T23:00:01.4761727Z [36;1mfind . -mindepth 1 -not -path "./.git*" -delete[0m
+2025-06-05T23:00:01.4761999Z [36;1m[0m
+2025-06-05T23:00:01.4762160Z [36;1m# Copy new files[0m
+2025-06-05T23:00:01.4762447Z [36;1mecho "Copying files from $FRONTEND_DIR to frontend repository"[0m
+2025-06-05T23:00:01.4762958Z [36;1mcp -r ../$FRONTEND_DIR/* .[0m
+2025-06-05T23:00:01.4763182Z [36;1m[0m
+2025-06-05T23:00:01.4763346Z [36;1m# Add, commit and push[0m
+2025-06-05T23:00:01.4763560Z [36;1mgit add -A[0m
+2025-06-05T23:00:01.4763738Z [36;1mgit status[0m
+2025-06-05T23:00:01.4763899Z [36;1m[0m
+2025-06-05T23:00:01.4764075Z [36;1m# Only commit if there are changes[0m
+2025-06-05T23:00:01.4764332Z [36;1mif git diff --staged --quiet; then[0m
+2025-06-05T23:00:01.4764588Z [36;1m  echo "No changes to commit"[0m
+2025-06-05T23:00:01.4764812Z [36;1melse[0m
+2025-06-05T23:00:01.4765013Z [36;1m  echo "Committing and pushing changes"[0m
+2025-06-05T23:00:01.4765337Z [36;1m  git commit -m "Update frontend from ZIP deployment"[0m
+2025-06-05T23:00:01.4765617Z [36;1m  git push[0m
+2025-06-05T23:00:01.4765794Z [36;1mfi[0m
+2025-06-05T23:00:01.4816947Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:01.4817171Z env:
+2025-06-05T23:00:01.4817411Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4817842Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:01.4818236Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4818576Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4818918Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4819260Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:01.4819539Z ##[endgroup]
+2025-06-05T23:00:01.4890679Z Current directory: /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T23:00:01.4891473Z Extracted contents:
+2025-06-05T23:00:01.4903840Z total 16
+2025-06-05T23:00:01.4904180Z drwxr-xr-x 4 runner docker 4096 Jun  5 23:00 .
+2025-06-05T23:00:01.4904904Z drwxr-xr-x 6 runner docker 4096 Jun  5 23:00 ..
+2025-06-05T23:00:01.4905269Z drwxrwxr-x 6 runner docker 4096 Jun  5 22:46 backend
+2025-06-05T23:00:01.4905607Z drwxrwxr-x 5 runner docker 4096 Jun  5 22:08 frontend
+2025-06-05T23:00:01.4906291Z Found frontend directory at extracted/frontend
+2025-06-05T23:00:01.4919308Z Cloning into 'frontend_repo'...
+2025-06-05T23:00:02.8002991Z Copying files from extracted/frontend to frontend repository
+2025-06-05T23:00:02.9248305Z On branch main
+2025-06-05T23:00:02.9248827Z Your branch is up to date with 'origin/main'.
+2025-06-05T23:00:02.9249247Z 
+2025-06-05T23:00:02.9249394Z nothing to commit, working tree clean
+2025-06-05T23:00:02.9272230Z No changes to commit
+2025-06-05T23:00:02.9299719Z ##[group]Run # Debug information
+2025-06-05T23:00:02.9300040Z [36;1m# Debug information[0m
+2025-06-05T23:00:02.9300287Z [36;1mecho "Current directory: $(pwd)"[0m
+2025-06-05T23:00:02.9300552Z [36;1mecho "Extracted contents:"[0m
+2025-06-05T23:00:02.9300785Z [36;1mls -la extracted[0m
+2025-06-05T23:00:02.9301203Z [36;1m[0m
+2025-06-05T23:00:02.9301435Z [36;1m# Check if backend directory exists[0m
+2025-06-05T23:00:02.9301734Z [36;1mif [ -d "extracted/new_structure/backend" ]; then[0m
+2025-06-05T23:00:02.9302100Z [36;1m  echo "Found backend directory at extracted/new_structure/backend"[0m
+2025-06-05T23:00:02.9302492Z [36;1m  BACKEND_DIR="extracted/new_structure/backend"[0m
+2025-06-05T23:00:02.9302787Z [36;1melif [ -d "extracted/backend" ]; then[0m
+2025-06-05T23:00:02.9303089Z [36;1m  echo "Found backend directory at extracted/backend"[0m
+2025-06-05T23:00:02.9303389Z [36;1m  BACKEND_DIR="extracted/backend"[0m
+2025-06-05T23:00:02.9303619Z [36;1melse[0m
+2025-06-05T23:00:02.9303892Z [36;1m  echo "ERROR: Could not find backend directory in extracted ZIP"[0m
+2025-06-05T23:00:02.9304217Z [36;1m  find extracted -type d | sort[0m
+2025-06-05T23:00:02.9304453Z [36;1m  exit 1[0m
+2025-06-05T23:00:02.9304612Z [36;1mfi[0m
+2025-06-05T23:00:02.9304766Z [36;1m[0m
+2025-06-05T23:00:02.9304927Z [36;1m# Clone backend repository[0m
+2025-06-05T23:00:02.9306158Z [36;1mgit clone ***github.com/jbkeenan/smartstatback.git backend_repo[0m
+2025-06-05T23:00:02.9306488Z [36;1m[0m
+2025-06-05T23:00:02.9306652Z [36;1m# Configure Git[0m
+2025-06-05T23:00:02.9307039Z [36;1mcd backend_repo[0m
+2025-06-05T23:00:02.9307258Z [36;1mgit config user.name "GitHub Action"[0m
+2025-06-05T23:00:02.9307543Z [36;1mgit config user.email "action@github.com"[0m
+2025-06-05T23:00:02.9307788Z [36;1m[0m
+2025-06-05T23:00:02.9307985Z [36;1m# Remove all existing files (except .git )[0m
+2025-06-05T23:00:02.9308289Z [36;1mfind . -mindepth 1 -not -path "./.git*" -delete[0m
+2025-06-05T23:00:02.9308561Z [36;1m[0m
+2025-06-05T23:00:02.9308720Z [36;1m# Copy new files[0m
+2025-06-05T23:00:02.9309004Z [36;1mecho "Copying files from $BACKEND_DIR to backend repository"[0m
+2025-06-05T23:00:02.9309336Z [36;1mcp -r ../$BACKEND_DIR/* .[0m
+2025-06-05T23:00:02.9309554Z [36;1m[0m
+2025-06-05T23:00:02.9309718Z [36;1m# Add, commit and push[0m
+2025-06-05T23:00:02.9309932Z [36;1mgit add -A[0m
+2025-06-05T23:00:02.9310108Z [36;1mgit status[0m
+2025-06-05T23:00:02.9310273Z [36;1m[0m
+2025-06-05T23:00:02.9310454Z [36;1m# Only commit if there are changes[0m
+2025-06-05T23:00:02.9310712Z [36;1mif git diff --staged --quiet; then[0m
+2025-06-05T23:00:02.9311145Z [36;1m  echo "No changes to commit"[0m
+2025-06-05T23:00:02.9311394Z [36;1melse[0m
+2025-06-05T23:00:02.9311594Z [36;1m  echo "Committing and pushing changes"[0m
+2025-06-05T23:00:02.9311909Z [36;1m  git commit -m "Update backend from ZIP deployment"[0m
+2025-06-05T23:00:02.9312180Z [36;1m  git push[0m
+2025-06-05T23:00:02.9312350Z [36;1mfi[0m
+2025-06-05T23:00:02.9362412Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:02.9362636Z env:
+2025-06-05T23:00:02.9362872Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:02.9363287Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:02.9363678Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:02.9364013Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:02.9364384Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:02.9364732Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:02.9365013Z ##[endgroup]
+2025-06-05T23:00:02.9442005Z Current directory: /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T23:00:02.9442565Z Extracted contents:
+2025-06-05T23:00:02.9455412Z total 16
+2025-06-05T23:00:02.9455755Z drwxr-xr-x 4 runner docker 4096 Jun  5 23:00 .
+2025-06-05T23:00:02.9456259Z drwxr-xr-x 7 runner docker 4096 Jun  5 23:00 ..
+2025-06-05T23:00:02.9456844Z drwxrwxr-x 6 runner docker 4096 Jun  5 22:46 backend
+2025-06-05T23:00:02.9457236Z drwxrwxr-x 5 runner docker 4096 Jun  5 22:08 frontend
+2025-06-05T23:00:02.9457808Z Found backend directory at extracted/backend
+2025-06-05T23:00:02.9470546Z Cloning into 'backend_repo'...
+2025-06-05T23:00:03.7070926Z Copying files from extracted/backend to backend repository
+2025-06-05T23:00:03.7169280Z On branch main
+2025-06-05T23:00:03.7169584Z Your branch is up to date with 'origin/main'.
+2025-06-05T23:00:03.7169804Z 
+2025-06-05T23:00:03.7169914Z Changes to be committed:
+2025-06-05T23:00:03.7170214Z   (use "git restore --staged <file>..." to unstage)
+2025-06-05T23:00:03.7170534Z 	modified:   requirements.txt
+2025-06-05T23:00:03.7170696Z 
+2025-06-05T23:00:03.7190525Z Committing and pushing changes
+2025-06-05T23:00:03.7246703Z [main 2316c96] Update backend from ZIP deployment
+2025-06-05T23:00:03.7247439Z  1 file changed, 2 insertions(+)
+2025-06-05T23:00:04.7090338Z To https://github.com/jbkeenan/smartstatback.git
+2025-06-05T23:00:04.7091386Z    70aaa55..2316c96  main -> main
+2025-06-05T23:00:04.7221575Z Post job cleanup.
+2025-06-05T23:00:04.8844064Z Post job cleanup.
+2025-06-05T23:00:04.9566583Z [command]/usr/bin/git version
+2025-06-05T23:00:04.9600873Z git version 2.49.0
+2025-06-05T23:00:04.9643577Z Temporarily overriding HOME='/home/runner/work/_temp/37b43180-74b3-4de0-a461-17c031ada75c' before making global git config changes
+2025-06-05T23:00:04.9644445Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-05T23:00:04.9647456Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T23:00:04.9678839Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-05T23:00:04.9708734Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-05T23:00:04.9935778Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-05T23:00:04.9958455Z http.https://github.com/.extraheader
+2025-06-05T23:00:04.9969730Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-05T23:00:04.9998944Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-05T23:00:05.0323986Z Cleaning up orphan processes

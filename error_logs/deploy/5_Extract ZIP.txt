@@ -1,0 +1,187 @@
+﻿2025-06-05T23:00:01.3405450Z ##[group]Run echo "Files in repository:"
+2025-06-05T23:00:01.3405795Z [36;1mecho "Files in repository:"[0m
+2025-06-05T23:00:01.3406033Z [36;1mls -la[0m
+2025-06-05T23:00:01.3406195Z [36;1m[0m
+2025-06-05T23:00:01.3406362Z [36;1m# Find the ZIP file[0m
+2025-06-05T23:00:01.3406587Z [36;1mZIP_FILE=$(ls *.zip | head -n 1)[0m
+2025-06-05T23:00:01.3406839Z [36;1mecho "Found ZIP file: $ZIP_FILE"[0m
+2025-06-05T23:00:01.3407065Z [36;1m[0m
+2025-06-05T23:00:01.3407245Z [36;1m# Create extraction directory[0m
+2025-06-05T23:00:01.3407492Z [36;1mmkdir -p extracted[0m
+2025-06-05T23:00:01.3407699Z [36;1m[0m
+2025-06-05T23:00:01.3407858Z [36;1m# Extract the ZIP[0m
+2025-06-05T23:00:01.3408088Z [36;1munzip -o "$ZIP_FILE" -d extracted[0m
+2025-06-05T23:00:01.3408331Z [36;1m[0m
+2025-06-05T23:00:01.3408495Z [36;1mecho "Extracted contents:"[0m
+2025-06-05T23:00:01.3408729Z [36;1mls -la extracted[0m
+2025-06-05T23:00:01.3459620Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:01.3459856Z env:
+2025-06-05T23:00:01.3460121Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3460543Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:01.3461186Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3461554Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3461904Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.3462423Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:01.3462706Z ##[endgroup]
+2025-06-05T23:00:01.3531431Z Files in repository:
+2025-06-05T23:00:01.3545617Z total 17060
+2025-06-05T23:00:01.3546002Z drwxr-xr-x 5 runner docker     4096 Jun  5 22:59 .
+2025-06-05T23:00:01.3546485Z drwxr-xr-x 3 runner docker     4096 Jun  5 22:59 ..
+2025-06-05T23:00:01.3546980Z drwxr-xr-x 7 runner docker     4096 Jun  5 22:59 .git
+2025-06-05T23:00:01.3547533Z drwxr-xr-x 3 runner docker     4096 Jun  5 22:59 .github
+2025-06-05T23:00:01.3548104Z -rw-r--r-- 1 runner docker     4319 Jun  5 22:59 .gitignore
+2025-06-05T23:00:01.3548699Z -rw-r--r-- 1 runner docker      171 Jun  5 22:59 README.md
+2025-06-05T23:00:01.3549064Z drwxr-xr-x 2 runner docker     4096 Jun  5 22:59 scripts
+2025-06-05T23:00:01.3549489Z -rw-r--r-- 1 runner docker 17435526 Jun  5 22:59 smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3570375Z Found ZIP file: smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3605283Z Archive:  smart_thermostat_v7.3.zip
+2025-06-05T23:00:01.3605882Z    creating: extracted/frontend/
+2025-06-05T23:00:01.3606335Z    creating: extracted/frontend/dist/
+2025-06-05T23:00:01.3606935Z    creating: extracted/frontend/dist/assets/
+2025-06-05T23:00:01.3607471Z    creating: extracted/frontend/dist/assets/icons/
+2025-06-05T23:00:01.3608540Z   inflating: extracted/frontend/dist/assets/icons/instagram.svg  
+2025-06-05T23:00:01.3609282Z   inflating: extracted/frontend/dist/assets/icons/calendar.svg  
+2025-06-05T23:00:01.3609949Z   inflating: extracted/frontend/dist/assets/icons/eco.svg  
+2025-06-05T23:00:01.3610754Z   inflating: extracted/frontend/dist/assets/icons/facebook.svg  
+2025-06-05T23:00:01.3611719Z   inflating: extracted/frontend/dist/assets/icons/money-saving.svg  
+2025-06-05T23:00:01.3612471Z   inflating: extracted/frontend/dist/assets/icons/linkedin.svg  
+2025-06-05T23:00:01.3613228Z   inflating: extracted/frontend/dist/assets/icons/multi-brand.svg  
+2025-06-05T23:00:01.3613958Z   inflating: extracted/frontend/dist/assets/icons/twitter.svg  
+2025-06-05T23:00:01.3614589Z    creating: extracted/frontend/dist/assets/images/
+2025-06-05T23:00:01.3704230Z   inflating: extracted/frontend/dist/assets/images/calendar-integration.png  
+2025-06-05T23:00:01.3778718Z   inflating: extracted/frontend/dist/assets/images/dashboard-mockup.png  
+2025-06-05T23:00:01.3872473Z   inflating: extracted/frontend/dist/assets/images/hero-thermostat.png  
+2025-06-05T23:00:01.3960776Z   inflating: extracted/frontend/dist/assets/images/multi-brand-devices.png  
+2025-06-05T23:00:01.4051132Z   inflating: extracted/frontend/dist/assets/images/savings-graph.png  
+2025-06-05T23:00:01.4057190Z   inflating: extracted/frontend/dist/assets/images/testimonial-1.jpg  
+2025-06-05T23:00:01.4064534Z   inflating: extracted/frontend/dist/assets/images/testimonial-2.jpg  
+2025-06-05T23:00:01.4071556Z   inflating: extracted/frontend/dist/assets/images/testimonial-3.jpg  
+2025-06-05T23:00:01.4097071Z   inflating: extracted/frontend/dist/assets/index-JMNJiWQO.js  
+2025-06-05T23:00:01.4099125Z   inflating: extracted/frontend/dist/assets/index-aasE8u49.css  
+2025-06-05T23:00:01.4099968Z   inflating: extracted/frontend/dist/assets/pattern.svg  
+2025-06-05T23:00:01.4100651Z   inflating: extracted/frontend/dist/index.html  
+2025-06-05T23:00:01.4101311Z   inflating: extracted/frontend/dist/vite.svg  
+2025-06-05T23:00:01.4101767Z    creating: extracted/frontend/public/
+2025-06-05T23:00:01.4102275Z    creating: extracted/frontend/public/assets/
+2025-06-05T23:00:01.4102745Z    creating: extracted/frontend/public/assets/icons/
+2025-06-05T23:00:01.4103554Z   inflating: extracted/frontend/public/assets/icons/instagram.svg  
+2025-06-05T23:00:01.4104271Z   inflating: extracted/frontend/public/assets/icons/calendar.svg  
+2025-06-05T23:00:01.4104923Z   inflating: extracted/frontend/public/assets/icons/eco.svg  
+2025-06-05T23:00:01.4105617Z   inflating: extracted/frontend/public/assets/icons/facebook.svg  
+2025-06-05T23:00:01.4106318Z   inflating: extracted/frontend/public/assets/icons/money-saving.svg  
+2025-06-05T23:00:01.4107330Z   inflating: extracted/frontend/public/assets/icons/linkedin.svg  
+2025-06-05T23:00:01.4108030Z   inflating: extracted/frontend/public/assets/icons/multi-brand.svg  
+2025-06-05T23:00:01.4108660Z   inflating: extracted/frontend/public/assets/icons/twitter.svg  
+2025-06-05T23:00:01.4109214Z    creating: extracted/frontend/public/assets/images/
+2025-06-05T23:00:01.4198698Z   inflating: extracted/frontend/public/assets/images/calendar-integration.png  
+2025-06-05T23:00:01.4272732Z   inflating: extracted/frontend/public/assets/images/dashboard-mockup.png  
+2025-06-05T23:00:01.4366184Z   inflating: extracted/frontend/public/assets/images/hero-thermostat.png  
+2025-06-05T23:00:01.4454758Z   inflating: extracted/frontend/public/assets/images/multi-brand-devices.png  
+2025-06-05T23:00:01.4544557Z   inflating: extracted/frontend/public/assets/images/savings-graph.png  
+2025-06-05T23:00:01.4550791Z   inflating: extracted/frontend/public/assets/images/testimonial-1.jpg  
+2025-06-05T23:00:01.4558417Z   inflating: extracted/frontend/public/assets/images/testimonial-2.jpg  
+2025-06-05T23:00:01.4565933Z   inflating: extracted/frontend/public/assets/images/testimonial-3.jpg  
+2025-06-05T23:00:01.4566742Z   inflating: extracted/frontend/public/assets/pattern.svg  
+2025-06-05T23:00:01.4567366Z   inflating: extracted/frontend/public/vite.svg  
+2025-06-05T23:00:01.4567890Z    creating: extracted/frontend/src/
+2025-06-05T23:00:01.4568359Z    creating: extracted/frontend/src/assets/
+2025-06-05T23:00:01.4569238Z   inflating: extracted/frontend/src/assets/react.svg  
+2025-06-05T23:00:01.4569835Z    creating: extracted/frontend/src/components/
+2025-06-05T23:00:01.4570395Z    creating: extracted/frontend/src/components/shared/
+2025-06-05T23:00:01.4571552Z   inflating: extracted/frontend/src/components/shared/TestModeToggle.tsx  
+2025-06-05T23:00:01.4572468Z   inflating: extracted/frontend/src/components/shared/ErrorHandler.tsx  
+2025-06-05T23:00:01.4573408Z   inflating: extracted/frontend/src/components/shared/Layout.css  
+2025-06-05T23:00:01.4574371Z   inflating: extracted/frontend/src/components/shared/Layout.tsx  
+2025-06-05T23:00:01.4575310Z   inflating: extracted/frontend/src/components/shared/PrivateRoute.tsx  
+2025-06-05T23:00:01.4576433Z   inflating: extracted/frontend/src/components/EnhancedLandingPage.css  
+2025-06-05T23:00:01.4578298Z   inflating: extracted/frontend/src/components/EnhancedLandingPage.tsx  
+2025-06-05T23:00:01.4579022Z   inflating: extracted/frontend/src/components/FAQPage.css  
+2025-06-05T23:00:01.4580116Z   inflating: extracted/frontend/src/components/FAQPage.tsx  
+2025-06-05T23:00:01.4581781Z   inflating: extracted/frontend/src/components/LandingPage.css  
+2025-06-05T23:00:01.4583264Z   inflating: extracted/frontend/src/components/LandingPage.tsx  
+2025-06-05T23:00:01.4584205Z   inflating: extracted/frontend/src/components/LoginPage.tsx  
+2025-06-05T23:00:01.4585547Z   inflating: extracted/frontend/src/components/RegisterPage.tsx  
+2025-06-05T23:00:01.4586514Z   inflating: extracted/frontend/src/components/TestModeToggle.css  
+2025-06-05T23:00:01.4587338Z   inflating: extracted/frontend/src/components/TestModeToggle.tsx  
+2025-06-05T23:00:01.4588080Z    creating: extracted/frontend/src/hooks/
+2025-06-05T23:00:01.4589293Z   inflating: extracted/frontend/src/hooks/useAuth.tsx  
+2025-06-05T23:00:01.4589862Z    creating: extracted/frontend/src/lib/
+2025-06-05T23:00:01.4593141Z   inflating: extracted/frontend/src/lib/api.ts  
+2025-06-05T23:00:01.4593686Z    creating: extracted/frontend/src/pages/
+2025-06-05T23:00:01.4594285Z    creating: extracted/frontend/src/pages/business-analysis/
+2025-06-05T23:00:01.4596595Z   inflating: extracted/frontend/src/pages/business-analysis/BusinessAnalysisPage.tsx  
+2025-06-05T23:00:01.4675721Z    creating: extracted/frontend/src/pages/calendars/
+2025-06-05T23:00:01.4676436Z   inflating: extracted/frontend/src/pages/calendars/CalendarsPage.tsx  
+2025-06-05T23:00:01.4677492Z    creating: extracted/frontend/src/pages/dashboard/
+2025-06-05T23:00:01.4678836Z   inflating: extracted/frontend/src/pages/dashboard/DashboardPage.tsx  
+2025-06-05T23:00:01.4679653Z    creating: extracted/frontend/src/pages/properties/
+2025-06-05T23:00:01.4680391Z   inflating: extracted/frontend/src/pages/properties/PropertiesPage.tsx  
+2025-06-05T23:00:01.4681288Z    creating: extracted/frontend/src/pages/schedules/
+2025-06-05T23:00:01.4681963Z   inflating: extracted/frontend/src/pages/schedules/SchedulesPage.tsx  
+2025-06-05T23:00:01.4682638Z    creating: extracted/frontend/src/pages/thermostats/
+2025-06-05T23:00:01.4683317Z   inflating: extracted/frontend/src/pages/thermostats/ThermostatsPage.tsx  
+2025-06-05T23:00:01.4684008Z   inflating: extracted/frontend/src/index.css  
+2025-06-05T23:00:01.4684544Z   inflating: extracted/frontend/src/App.css  
+2025-06-05T23:00:01.4685012Z   inflating: extracted/frontend/src/App.tsx  
+2025-06-05T23:00:01.4685358Z  extracting: extracted/frontend/src/vite-env.d.ts  
+2025-06-05T23:00:01.4685675Z   inflating: extracted/frontend/src/main.tsx  
+2025-06-05T23:00:01.4685983Z   inflating: extracted/frontend/eslint.config.js  
+2025-06-05T23:00:01.4686272Z   inflating: extracted/frontend/README.md  
+2025-06-05T23:00:01.4686554Z   inflating: extracted/frontend/package-lock.json  
+2025-06-05T23:00:01.4686847Z   inflating: extracted/frontend/index.html  
+2025-06-05T23:00:01.4687137Z   inflating: extracted/frontend/tsconfig.app.json  
+2025-06-05T23:00:01.4687425Z   inflating: extracted/frontend/package.json  
+2025-06-05T23:00:01.4687728Z   inflating: extracted/frontend/tsconfig.node.json  
+2025-06-05T23:00:01.4688035Z   inflating: extracted/frontend/tsconfig.json  
+2025-06-05T23:00:01.4688322Z   inflating: extracted/frontend/vite.config.ts  
+2025-06-05T23:00:01.4688594Z    creating: extracted/backend/
+2025-06-05T23:00:01.4688820Z    creating: extracted/backend/api/
+2025-06-05T23:00:01.4689074Z    creating: extracted/backend/api/migrations/
+2025-06-05T23:00:01.4689394Z   inflating: extracted/backend/api/migrations/0001_initial.py  
+2025-06-05T23:00:01.4689776Z  extracting: extracted/backend/api/migrations/__init__.py  
+2025-06-05T23:00:01.4690101Z    creating: extracted/backend/api/tests/
+2025-06-05T23:00:01.4690386Z   inflating: extracted/backend/api/tests/run_tests.py  
+2025-06-05T23:00:01.4690790Z   inflating: extracted/backend/api/tests/test_thermostat_api_extension.py  
+2025-06-05T23:00:01.4691507Z   inflating: extracted/backend/api/tests/test_thermostat_clients.py  
+2025-06-05T23:00:01.4691879Z    creating: extracted/backend/api/thermostat_clients/
+2025-06-05T23:00:01.4692250Z   inflating: extracted/backend/api/thermostat_clients/base_client.py  
+2025-06-05T23:00:01.4692875Z  extracting: extracted/backend/api/thermostat_clients/__init__.py  
+2025-06-05T23:00:01.4693307Z   inflating: extracted/backend/api/thermostat_clients/client_factory.py  
+2025-06-05T23:00:01.4693753Z   inflating: extracted/backend/api/thermostat_clients/cielo_client.py  
+2025-06-05T23:00:01.4694191Z   inflating: extracted/backend/api/thermostat_clients/pioneer_client.py  
+2025-06-05T23:00:01.4694657Z   inflating: extracted/backend/api/thermostat_clients/nest_client.py  
+2025-06-05T23:00:01.4695076Z   inflating: extracted/backend/api/serializers.py  
+2025-06-05T23:00:01.4695396Z  extracting: extracted/backend/api/__init__.py  
+2025-06-05T23:00:01.4695724Z   inflating: extracted/backend/api/admin.py  
+2025-06-05T23:00:01.4696005Z   inflating: extracted/backend/api/apps.py  
+2025-06-05T23:00:01.4696291Z   inflating: extracted/backend/api/endpoints.md  
+2025-06-05T23:00:01.4696592Z   inflating: extracted/backend/api/models.py  
+2025-06-05T23:00:01.4696881Z   inflating: extracted/backend/api/tests.py  
+2025-06-05T23:00:01.4697161Z   inflating: extracted/backend/api/urls.py  
+2025-06-05T23:00:01.4697432Z   inflating: extracted/backend/api/views.py  
+2025-06-05T23:00:01.4697766Z   inflating: extracted/backend/api/thermostat_api_extension.py  
+2025-06-05T23:00:01.4698090Z    creating: extracted/backend/static/
+2025-06-05T23:00:01.4698349Z    creating: extracted/backend/static/css/
+2025-06-05T23:00:01.4698805Z   inflating: extracted/backend/static/css/business_analysis.css  
+2025-06-05T23:00:01.4699146Z    creating: extracted/backend/static/images/
+2025-06-05T23:00:01.4699500Z   inflating: extracted/backend/static/images/thermostat-pattern.svg  
+2025-06-05T23:00:01.4699908Z   inflating: extracted/backend/static/images/cta-pattern.svg  
+2025-06-05T23:00:01.4700231Z    creating: extracted/backend/templates/
+2025-06-05T23:00:01.4700747Z   inflating: extracted/backend/templates/business_analysis.html  
+2025-06-05T23:00:01.4701519Z    creating: extracted/backend/thermostat_project/
+2025-06-05T23:00:01.4702105Z  extracting: extracted/backend/thermostat_project/__init__.py  
+2025-06-05T23:00:01.4702484Z   inflating: extracted/backend/thermostat_project/asgi.py  
+2025-06-05T23:00:01.4702882Z   inflating: extracted/backend/thermostat_project/settings.py  
+2025-06-05T23:00:01.4703248Z   inflating: extracted/backend/thermostat_project/urls.py  
+2025-06-05T23:00:01.4703594Z   inflating: extracted/backend/thermostat_project/wsgi.py  
+2025-06-05T23:00:01.4703932Z   inflating: extracted/backend/deployment_guide.md  
+2025-06-05T23:00:01.4704226Z   inflating: extracted/backend/db.sqlite3  
+2025-06-05T23:00:01.4704507Z   inflating: extracted/backend/requirements.txt  
+2025-06-05T23:00:01.4704964Z   inflating: extracted/backend/manage.py  
+2025-06-05T23:00:01.4705539Z   inflating: extracted/backend/frontend_integration_guide.md  
+2025-06-05T23:00:01.4706054Z Extracted contents:
+2025-06-05T23:00:01.4706363Z total 16
+2025-06-05T23:00:01.4706680Z drwxr-xr-x 4 runner docker 4096 Jun  5 23:00 .
+2025-06-05T23:00:01.4707145Z drwxr-xr-x 6 runner docker 4096 Jun  5 23:00 ..
+2025-06-05T23:00:01.4707447Z drwxrwxr-x 6 runner docker 4096 Jun  5 22:46 backend
+2025-06-05T23:00:01.4707749Z drwxrwxr-x 5 runner docker 4096 Jun  5 22:08 frontend

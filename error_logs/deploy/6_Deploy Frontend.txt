@@ -1,0 +1,70 @@
+﻿2025-06-05T23:00:01.4753566Z ##[group]Run # Debug information
+2025-06-05T23:00:01.4753896Z [36;1m# Debug information[0m
+2025-06-05T23:00:01.4754143Z [36;1mecho "Current directory: $(pwd)"[0m
+2025-06-05T23:00:01.4754412Z [36;1mecho "Extracted contents:"[0m
+2025-06-05T23:00:01.4754642Z [36;1mls -la extracted[0m
+2025-06-05T23:00:01.4754836Z [36;1m[0m
+2025-06-05T23:00:01.4755024Z [36;1m# Check if frontend directory exists[0m
+2025-06-05T23:00:01.4755336Z [36;1mif [ -d "extracted/new_structure/frontend" ]; then[0m
+2025-06-05T23:00:01.4755726Z [36;1m  echo "Found frontend directory at extracted/new_structure/frontend"[0m
+2025-06-05T23:00:01.4756107Z [36;1m  FRONTEND_DIR="extracted/new_structure/frontend"[0m
+2025-06-05T23:00:01.4756402Z [36;1melif [ -d "extracted/frontend" ]; then[0m
+2025-06-05T23:00:01.4756713Z [36;1m  echo "Found frontend directory at extracted/frontend"[0m
+2025-06-05T23:00:01.4757026Z [36;1m  FRONTEND_DIR="extracted/frontend"[0m
+2025-06-05T23:00:01.4757262Z [36;1melse[0m
+2025-06-05T23:00:01.4757519Z [36;1m  echo "ERROR: Could not find frontend directory in extracted ZIP"[0m
+2025-06-05T23:00:01.4757887Z [36;1m  find extracted -type d | sort[0m
+2025-06-05T23:00:01.4758115Z [36;1m  exit 1[0m
+2025-06-05T23:00:01.4758281Z [36;1mfi[0m
+2025-06-05T23:00:01.4758436Z [36;1m[0m
+2025-06-05T23:00:01.4758616Z [36;1m# Clone frontend repository[0m
+2025-06-05T23:00:01.4759612Z [36;1mgit clone ***github.com/jbkeenan/smartstatfront.git frontend_repo[0m
+2025-06-05T23:00:01.4759944Z [36;1m[0m
+2025-06-05T23:00:01.4760108Z [36;1m# Configure Git[0m
+2025-06-05T23:00:01.4760305Z [36;1mcd frontend_repo[0m
+2025-06-05T23:00:01.4760536Z [36;1mgit config user.name "GitHub Action"[0m
+2025-06-05T23:00:01.4760823Z [36;1mgit config user.email "action@github.com"[0m
+2025-06-05T23:00:01.4761207Z [36;1m[0m
+2025-06-05T23:00:01.4761407Z [36;1m# Remove all existing files (except .git )[0m
+2025-06-05T23:00:01.4761725Z [36;1mfind . -mindepth 1 -not -path "./.git*" -delete[0m
+2025-06-05T23:00:01.4761992Z [36;1m[0m
+2025-06-05T23:00:01.4762158Z [36;1m# Copy new files[0m
+2025-06-05T23:00:01.4762445Z [36;1mecho "Copying files from $FRONTEND_DIR to frontend repository"[0m
+2025-06-05T23:00:01.4762955Z [36;1mcp -r ../$FRONTEND_DIR/* .[0m
+2025-06-05T23:00:01.4763180Z [36;1m[0m
+2025-06-05T23:00:01.4763344Z [36;1m# Add, commit and push[0m
+2025-06-05T23:00:01.4763558Z [36;1mgit add -A[0m
+2025-06-05T23:00:01.4763731Z [36;1mgit status[0m
+2025-06-05T23:00:01.4763897Z [36;1m[0m
+2025-06-05T23:00:01.4764073Z [36;1m# Only commit if there are changes[0m
+2025-06-05T23:00:01.4764330Z [36;1mif git diff --staged --quiet; then[0m
+2025-06-05T23:00:01.4764586Z [36;1m  echo "No changes to commit"[0m
+2025-06-05T23:00:01.4764810Z [36;1melse[0m
+2025-06-05T23:00:01.4765011Z [36;1m  echo "Committing and pushing changes"[0m
+2025-06-05T23:00:01.4765334Z [36;1m  git commit -m "Update frontend from ZIP deployment"[0m
+2025-06-05T23:00:01.4765615Z [36;1m  git push[0m
+2025-06-05T23:00:01.4765788Z [36;1mfi[0m
+2025-06-05T23:00:01.4816939Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:01.4817168Z env:
+2025-06-05T23:00:01.4817408Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4817839Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:01.4818234Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4818574Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4818915Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:01.4819258Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:01.4819537Z ##[endgroup]
+2025-06-05T23:00:01.4890663Z Current directory: /home/runner/work/smartstat-updates/smartstat-updates
+2025-06-05T23:00:01.4891468Z Extracted contents:
+2025-06-05T23:00:01.4903832Z total 16
+2025-06-05T23:00:01.4904176Z drwxr-xr-x 4 runner docker 4096 Jun  5 23:00 .
+2025-06-05T23:00:01.4904654Z drwxr-xr-x 6 runner docker 4096 Jun  5 23:00 ..
+2025-06-05T23:00:01.4905266Z drwxrwxr-x 6 runner docker 4096 Jun  5 22:46 backend
+2025-06-05T23:00:01.4905605Z drwxrwxr-x 5 runner docker 4096 Jun  5 22:08 frontend
+2025-06-05T23:00:01.4906286Z Found frontend directory at extracted/frontend
+2025-06-05T23:00:01.4919296Z Cloning into 'frontend_repo'...
+2025-06-05T23:00:02.8002950Z Copying files from extracted/frontend to frontend repository
+2025-06-05T23:00:02.9248265Z On branch main
+2025-06-05T23:00:02.9248823Z Your branch is up to date with 'origin/main'.
+2025-06-05T23:00:02.9249241Z 
+2025-06-05T23:00:02.9249391Z nothing to commit, working tree clean
+2025-06-05T23:00:02.9272214Z No changes to commit

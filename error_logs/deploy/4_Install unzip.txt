@@ -1,0 +1,16 @@
+﻿2025-06-05T23:00:00.0275880Z ##[group]Run sudo apt-get install unzip
+2025-06-05T23:00:00.0276268Z [36;1msudo apt-get install unzip[0m
+2025-06-05T23:00:00.0484367Z shell: /usr/bin/bash -e {0}
+2025-06-05T23:00:00.0484767Z env:
+2025-06-05T23:00:00.0485085Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0485609Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib/pkgconfig
+2025-06-05T23:00:00.0486161Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0486637Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0487073Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.17/x64
+2025-06-05T23:00:00.0487541Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.17/x64/lib
+2025-06-05T23:00:00.0487903Z ##[endgroup]
+2025-06-05T23:00:00.9921554Z Reading package lists...
+2025-06-05T23:00:01.1711938Z Building dependency tree...
+2025-06-05T23:00:01.1724940Z Reading state information...
+2025-06-05T23:00:01.3351095Z unzip is already the newest version (6.0-28ubuntu4.1).
+2025-06-05T23:00:01.3351922Z 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
